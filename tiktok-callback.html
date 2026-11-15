@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TikTok-Anmeldung</title>
+<style>
+  body { font-family: system-ui, "Segoe UI", Arial, sans-serif; line-height: 1.6; color: #1c1f26; background: #f6f7f9; margin: 0; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 20px; }
+  code { display: block; padding: 12px; background: #fff; border: 1px solid #d9dce3; word-break: break-all; }
+</style>
+</head>
+<body>
+<main>
+  <h1>TikTok-Anmeldung abgeschlossen</h1>
+  <p>Dieser Code wird nur in dieser Seite angezeigt und nirgendwohin gesendet. Er gehört in das lokale Upload-Programm des Betreibers.</p>
+  <code id="code">…</code>
+  <p>Sign-in complete. The code below is only shown here and is not sent anywhere; copy it into the operator's local upload tool.</p>
+</main>
+<script>
+  var p = new URLSearchParams(location.search);
+  document.getElementById("code").textContent = p.get("code") || p.get("error_description") || p.get("error") || "kein Code / no code";
+</script>
+</body>
+</html>
